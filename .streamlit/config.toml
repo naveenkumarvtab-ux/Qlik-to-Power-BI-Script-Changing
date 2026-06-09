@@ -3,6 +3,12 @@ enableCORS = false
 enableXsrfProtection = false
 enableWebsocketCompression = false
 headless = true
+address = "0.0.0.0"
+maxUploadSize = 500
+maxMessageSize = 500
 
-# Keep the root app file path since Render runs from the repository root.
-# The port is set by Render through the $PORT variable in the start command.
+[logger]
+level = "debug"
+
+# Render deployment: These settings ensure file uploads work through proxies
+# The command-line flags also set these, but config.toml acts as a fallback.
